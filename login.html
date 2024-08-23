@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="CSS/validation.css">
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Swiper CSS File -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <title>Topoco</title>
+</head>
+<body>
+  <header>
+    <div class="container top-nav">
+      <a href="#" class="logo"><img src="img/logo-black.png" alt=""></a>
+      <form action="" class="search">
+        <input type="search" name="Search" id="search" placeholder="Search For Products...">
+        <button type="submit">Search</button>
+      </form>
+      <div class="cart-header">
+        <div class="icon-cart">
+          <i class="fa-solid fa-bag-shopping cart-btn"></i>
+          <span class="count-item">0</span>
+        </div>
+        <div class="total-price">
+          <p>My Cart:</p>
+          <p class="price-cart-head">$0</p>
+        </div>
+      </div>
+    </div>
+    <nav>
+      <div class="links container">
+        <i class="fa-solid fa-bars btn-open-menu"></i>
+        <ul>
+          <span class="bg-overlay"></span>
+          <i class="fa-regular fa-xmark-circle btn-close-menu"></i>
+          <img class="logo-menu" src="img/logo-black.png" alt="">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="allProducts.html">All Products</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="login-signup">
+          <a href="sign.html">Sign Up <i class="fa-solid fa-user-plus"></i></a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="cart">
+    <div class="top-cart">
+      <h3>My Cart <span><span id="count-list">(0)</span> Items In Cart</span></h3>
+      <span class="close-cart"><i class="fa-regular fa-circle-xmark"></i></span>
+    </div>
+    <div class="item-in-cart"></div>
+    <div class="bottom-cart">
+      <div class="total">
+        <p>Cart Subtotal</p>
+        <p class="price-cart-total">$0</p>
+      </div>
+      <div class="button-cart">
+        <a href="checkout.html" class="btn-cart">Process To Checkout</a>
+        <button class="btn-cart trans-bg">Shop More</button>
+      </div>
+    </div>
+  </div>
+  <section class="login sec-form">
+    <div class="form-container">
+      <p class="title">Welcome Back</p>
+      <p id="error"></p>
+      <form action="index.html" onsubmit="return loginValidate();" novalidate>
+        <input type="email" placeholder="Enter Your Email..." id="email">
+        <input type="password" placeholder="Enter Your Password..." id="password">
+        <p class="page-link">
+          <a href="#" class="page-link-label">Forgot Password?</a>
+        </p>
+        <button class="form-btn" type="submit">Login</button>
+      </form>
+      <p class="sign-up-label">
+        Don't Have An Account <a href="sign.html" class="sign-up-link">Sign Up Now</a>
+      </p>
+      <div class="buttons-container">
+        <div class="apple-login-button">
+          <i class="fa-brands fa-apple"></i>
+          <span>Login With Apple</span>
+        </div>
+        <div class="google-login-button">
+          <i class="fa-brands fa-google"></i>
+          <span>Login With Google</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <div class="big-row">
+        <img src="img/logo-white.png" alt="">
+        <div class="hotline">
+          <i class="fa-solid fa-headset"></i>
+          <div class="text">
+            <h5>Hotline Free 24/24</h5>
+            <h6>(+20) 123 456 7891</h6>
+          </div>
+        </div>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda?</p>
+      </div>
+      <div class="row">
+        <h4>FAQs & Help</h4>
+        <div class="links">
+          <a href="#">FAQs</a>
+          <a href="#">Ordering Tracking</a>
+          <a href="#">Contacts</a>
+          <a href="#">Events</a>
+          <a href="#">Help Center</a>
+        </div>
+      </div>
+      <div class="row">
+        <h4>Shipping & Delivery</h4>
+        <div class="links">
+          <a href="#">Delivery Information</a>
+          <a href="#">Discount</a>
+          <a href="#">Payment & Shipping</a>
+          <a href="#">Estimated Delivery Time</a>
+          <a href="#">Shipping Guide</a>
+        </div>
+      </div>
+      <div class="row">
+        <h4>Information</h4>
+        <div class="links">
+          <a href="#">Popular</a>
+          <a href="#">Our Services</a>
+          <a href="#">Your Account</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Condition</a>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-footer">
+      <div class="container">
+        <p>Copyright &copy; <span>Topico.</span> All Rights Reserved</p>
+        <div class="payment-img">
+          <img src="img/payment-1.png" alt="">
+          <img src="img/payment-2.png" alt="">
+          <img src="img/payment-3.png" alt="">
+          <img src="img/payment-4.png" alt="">
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="JS/validation.js"></script>
+  <script src="JS/main.js"></script>
+</body>
+</html>
