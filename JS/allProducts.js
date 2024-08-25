@@ -6,7 +6,7 @@ const OpenAndCloseFilter = () => {
 
 
 // Fetch And Show The Data
-fetch("/JS/items.json").then(res => res.json()).then(data => showData(data));
+fetch("../JS/items.json").then(res => res.json()).then(data => showData(data));
 
 const showData = (data) => {
   const Products = document.querySelector("#products-div");
