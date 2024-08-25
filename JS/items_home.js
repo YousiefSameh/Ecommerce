@@ -1,4 +1,4 @@
-fetch("/JS/items.json").then(res => res.json()).then(data => showData(data));
+fetch("../JS/items.json").then(res => res.json()).then(data => showData(data));
 
 const showData = (data) => {
   const productsItemsSale = document.querySelector(".products-items-sale");
